@@ -20,24 +20,18 @@ namespace Project
                 System.Console.Write("Common, used or imported (c/u/i)? ");
                 string type = Console.ReadLine();
 
+                System.Console.Write("Name: ");
+                string name = Console.ReadLine();
+
+                System.Console.Write("Price: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
                 if(type == "c")
                 {
-                    System.Console.Write("Name: ");
-                    string name = Console.ReadLine();
-
-                    System.Console.Write("Price: ");
-                    double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
                     products.Add(new Product(name, price));
                 }
                 else if(type == "u")
                 {
-                    System.Console.Write("Name: ");
-                    string name = Console.ReadLine();
-
-                    System.Console.Write("Price: ");
-                    double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
                     System.Console.Write("Manufacture date (DD/MM/YYYY): ");
                     DateTime date = DateTime.Parse(Console.ReadLine());
 
@@ -45,12 +39,6 @@ namespace Project
                 }
                 else if(type == "i")
                 {
-                    System.Console.Write("Name: ");
-                    string name = Console.ReadLine();
-
-                    System.Console.Write("Price: ");
-                    double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
                     System.Console.Write("Customs fee: ");
                     double fee = double.Parse(Console.ReadLine());
 
